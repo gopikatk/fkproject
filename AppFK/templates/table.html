@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<center>
+    <h3 class="alert alert-info text-center mt-3 w-50">
+        PRODUCT TABLE
+    </h3>
+    <table class="table table-info table-hover text-center  mb-5 w-50">
+        <thead>
+            <tr>
+                <th>BRAND</th>
+                <th>QUANTITY</th>
+                <th>PRICE</th>
+                             
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in sdata %}
+            <tr>
+                <td>{{ p.Std_Name}}</td>
+                <td>{{ p.Std_Address}}</td>
+                <td>{{ p.Std_Age}}</td>
+                  
+            </tr>
+            {% endfor %}
+        </tbody> 
+    </table>
+
+
+    <h3 class="alert alert-primary text-center mt-4 w-50">
+        CATOGARY TABLE
+    </h3>
+    <table class="table table-primary table-hover text-center mt-3 w-50">
+        <thead>
+            <tr>
+                <th>PRODUCT</th>
+                <th>CATOGARY</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in cdata %}
+            <tr>
+                <td>{{ p.Course_Name }}</td>  
+                <td>{{ p.Course_Fees }}</td>  
+            </tr>
+            {% endfor %}
+        </tbody> 
+    </table>
+
+</center>
+{% endblock %}
